@@ -1,136 +1,81 @@
-:root {
-  --bg: #0b1220;
-  --card: #111827;
-  --primary: #4f46e5;
-  --text: #e5e7eb;
-  --muted: #94a3b8;
-  --success: #22c55e;
-  --warning: #f59e0b;
-  --danger: #ef4444;
-  --radius: 16px;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CRM Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
 
-body {
-  margin: 0;
-  font-family: Inter, sans-serif;
-  background: #f8fafc;
-  color: #0f172a;
-}
+<body>
 
-/* Layout */
-.container {
-  display: flex;
-  min-height: 100vh;
-}
+<div class="container">
 
-/* Sidebar */
-.sidebar {
-  width: 260px;
-  background: var(--bg);
-  color: var(--text);
-  padding: 20px;
-}
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>CRM Panel</h2>
+    <a href="#">📊 Dashboard</a>
+    <a href="#">👤 Leads</a>
+    <a href="#">💼 Deals</a>
+    <a href="#">📞 Contacts</a>
+    <a href="#">⚙️ Settings</a>
+  </div>
 
-.sidebar h2 {
-  font-size: 18px;
-  margin-bottom: 20px;
-}
+  <!-- Main -->
+  <div class="main">
 
-.sidebar a {
-  display: block;
-  padding: 10px 12px;
-  border-radius: 10px;
-  color: var(--muted);
-  text-decoration: none;
-  margin-bottom: 6px;
-  transition: 0.2s;
-}
+    <h1>Dashboard</h1>
 
-.sidebar a:hover {
-  background: rgba(255,255,255,0.06);
-  color: white;
-}
+    <!-- KPI Cards -->
+    <div class="grid">
+      <div class="card">
+        <div class="kpi-title">Total Leads</div>
+        <div class="kpi-value">128</div>
+      </div>
 
-/* Main */
-.main {
-  flex: 1;
-  padding: 24px;
-}
+      <div class="card">
+        <div class="kpi-title">Active Deals</div>
+        <div class="kpi-value">34</div>
+      </div>
 
-/* Cards */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-}
+      <div class="card">
+        <div class="kpi-title">Won</div>
+        <div class="kpi-value">19</div>
+      </div>
 
-.card {
-  background: white;
-  border-radius: var(--radius);
-  padding: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-  transition: 0.2s ease;
-}
+      <div class="card">
+        <div class="kpi-title">Revenue</div>
+        <div class="kpi-value">$12.4K</div>
+      </div>
+    </div>
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 35px rgba(0,0,0,0.08);
-}
+    <!-- Table -->
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Status</th>
+        <th>Source</th>
+        <th>Action</th>
+      </tr>
 
-/* KPI */
-.kpi-title {
-  font-size: 13px;
-  color: #64748b;
-}
+      <tr>
+        <td>John Doe</td>
+        <td>New</td>
+        <td>Website</td>
+        <td><button class="btn btn-primary">View</button></td>
+      </tr>
 
-.kpi-value {
-  font-size: 22px;
-  font-weight: 700;
-  margin-top: 6px;
-}
+      <tr>
+        <td>Sarah Smith</td>
+        <td>In Progress</td>
+        <td>Instagram</td>
+        <td><button class="btn btn-primary">View</button></td>
+      </tr>
+    </table>
 
-/* Table */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-  background: white;
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-}
+  </div>
 
-th {
-  text-align: left;
-  padding: 12px;
-  background: #f1f5f9;
-  font-size: 13px;
-}
+</div>
 
-td {
-  padding: 12px;
-  border-top: 1px solid #e2e8f0;
-}
-
-tr:hover {
-  background: #f8fafc;
-}
-
-/* Buttons */
-.btn {
-  padding: 8px 12px;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  transition: 0.2s;
-  font-weight: 500;
-}
-
-.btn-primary {
-  background: var(--primary);
-  color: white;
-}
-
-.btn-primary:hover {
-  background: #4338ca;
-}
+</body>
+</html>
