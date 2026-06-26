@@ -1,19 +1,128 @@
+:root {
+  --bg: #0b1220;
+  --card: #111827;
+  --primary: #4f46e5;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --radius: 16px;
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: Inter, sans-serif;
+  background: #f8fafc;
+  color: #0f172a;
+}
 
-  background: radial-gradient(circle at top left, #1e3a8a, transparent),
-              radial-gradient(circle at bottom right, #0ea5e9, transparent),
-              #0f172a;
-
+/* Layout */
+.container {
+  display: flex;
   min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background: var(--bg);
+  color: var(--text);
+  padding: 20px;
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: var(--muted);
+  text-decoration: none;
+  margin-bottom: 6px;
+  transition: 0.2s;
+}
+
+.sidebar a:hover {
+  background: rgba(255,255,255,0.05);
   color: white;
 }
 
-.container {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+/* Main */
+.main {
+  flex: 1;
+  padding: 24px;
+}
+
+/* Cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* KPI */
+.kpi-title {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.kpi-value {
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+th {
+  text-align: left;
+  padding: 12px;
+  background: #f1f5f9;
+  font-size: 13px;
+}
+
+td {
+  padding: 12px;
+  border-top: 1px solid #e2e8f0;
+}
+
+tr:hover {
+  background: #f8fafc;
+}
+
+/* Buttons */
+.btn {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
 }
