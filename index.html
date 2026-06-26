@@ -1,23 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>CRM MZI</title>
+  <meta charset="UTF-8">
+  <title>CRM Panel</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+    }
+
+    .header {
+      background: #1f2937;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 850px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 15px;
+      color: gray;
+      font-size: 12px;
+    }
+  </style>
 </head>
-<body style="margin:0; font-family:Arial;">
 
-  <h2 style="text-align:center; padding:20px;">
-    CRM Panel
-  </h2>
+<body>
 
-  <div style="max-width:900px; margin:auto; padding:20px;">
+  <div class="header">
+    🧾 Insurance CRM Panel
+  </div>
+
+  <div class="container">
+
+    <h2>Customer Registration Form</h2>
 
     <iframe
-      src="https://docs.google.com/forms/d/e/1FAIpQLSeG79nsB3HnaCNl6aJ2j41VC_BXcjl57Tf94MXlSZ8jIl67AQ/viewform?embedded=true"
-      width="100%"
-      height="900"
-      style="border:none;">
+      src="https://docs.google.com/forms/d/e/1FAIpQLSeG79nsB3HnaCNl6aJ2j41VC_BXcjl57Tf94MXlSZ8jIl67AQ/viewform?embedded=true">
     </iframe>
 
+  </div>
+
+  <div class="footer">
+    Powered by GitHub Pages
   </div>
 
 </body>
